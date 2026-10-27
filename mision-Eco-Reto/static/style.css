@@ -1,0 +1,28 @@
+:root{
+  --azul:#4338CA;
+  --morado:#7C3AED;
+  --verde:#10B981;
+  --verde-dark:#065F46;
+  --bg:#F5F3FF;
+}
+*{box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
+body{margin:0; background:var(--bg);}
+.login-wrap{display:flex; min-height:100vh;}
+.login-left{flex:1.2; background: linear-gradient(135deg, var(--azul), var(--morado), var(--verde)); color:white; padding:60px; display:flex; flex-direction:column; justify-content:center;}
+.login-left h1{font-size:52px; line-height:0.9; margin:0;}
+.login-right{flex:1; background:white; display:flex; justify-content:center; align-items:center;}
+.card-login{width:360px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(67,56,202,0.15); border-top:6px solid var(--verde);}
+.btn-main{background: linear-gradient(90deg, var(--azul), var(--morado)); color:white; border:none; padding:12px; width:100%; border-radius:10px; font-weight:bold; cursor:pointer;}
+.btn-main:hover{background:var(--verde);}
+input, select, textarea{width:100%; padding:11px; margin:7px 0 15px 0; border-radius:10px; border:1.5px solid #E2E8F0; outline:none;}
+input:focus, select:focus, textarea:focus{border-color:var(--morado);}
+.sidebar{width:230px; background:#0F172A; min-height:100vh; position:fixed; color:white; padding:20px 0;}
+.sidebar a{display:block; color:#94A3B8; padding:13px 20px; text-decoration:none; margin:4px 10px; border-radius:10px;}
+.sidebar a.active, .sidebar a:hover{background: linear-gradient(90deg, var(--azul), var(--morado)); color:white;}
+.topbar{margin-left:230px; background: linear-gradient(90deg, var(--verde-dark), var(--azul)); color:white; padding:14px 25px; display:flex; justify-content:space-between;}
+.content{margin-left:230px; padding:25px;}
+.card-stat{border-radius:14px; padding:18px; font-weight:bold; background:white; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+table{width:100%; border-collapse:collapse; background:white; border-radius:14px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+th{background:#EEF2FF; color:var(--azul); text-align:left; padding:12px;}
+td{padding:12px; border-bottom:1px solid #F1F5F9;}
+.form-box{background:white; padding:25px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.05);}

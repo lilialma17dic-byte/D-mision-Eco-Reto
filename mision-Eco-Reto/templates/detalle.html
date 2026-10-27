@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block content %}
+<div class="form-box">
+<h2>🌿 Detalles de la acción</h2>
+<div style="background:#F0FDF4; padding:20px; border-radius:12px; border-left:5px solid var(--verde);">
+<h3 style="margin:0; color:var(--verde-dark);">{{accion.tipo}}</h3><p>{{accion.descripcion}}</p>
+<p>📅 {{accion.fecha}}</p><h2 style="color:var(--azul);">{{accion.impacto}}</h2>
+</div>
+<div style="margin-top:15px;"><a href="/editar/{{accion.id}}" class="btn-main" style="padding:10px 20px; text-decoration:none;">✏️ Editar</a>
+<a href="/eliminar/{{accion.id}}" style="background:#EF4444; color:white; padding:10px 20px; border-radius:10px; text-decoration:none; margin-left:10px;">🗑️ Eliminar</a></div>
+<div style="margin-top:20px; background:#F5F3FF; padding:15px; border-radius:12px;">🌳 <b>¡Gracias por ser parte del cambio!</b><br><small>Cada acción cuenta para un planeta más limpio.</small></div>
+</div>{% endblock %}

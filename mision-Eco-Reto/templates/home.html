@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block content %}
+<h2>¡Bienvenido a Misión Eco-Reto!</h2><p>Registra, consulta y comparte las acciones que ayudan al planeta.</p>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:15px; margin:20px 0;">
+  <div class="card-stat" style="border-left:5px solid var(--verde);">🍃 {{ total }}<br><small>Acciones registradas</small></div>
+  <div class="card-stat" style="border-left:5px solid var(--azul);">💧 {{ litros }}<br><small>Litros ahorrados</small></div>
+  <div class="card-stat" style="border-left:5px solid #F59E0B;">♻️ {{ reciclados }}<br><small>Materiales reciclados</small></div>
+  <div class="card-stat" style="border-left:5px solid var(--morado);">☁️ {{ co2 }} kg<br><small>CO₂ evitado</small></div>
+</div>
+<h3>Mis acciones registradas</h3>
+<table><tr><th>ID</th><th>Fecha</th><th>Tipo</th><th>Descripción</th><th>Impacto</th><th>Acciones</th></tr>
+{% for a in acciones %}<tr>
+<td>{{a.id}}</td><td>{{a.fecha}}</td>
+<td><span style="background:#EDE9FE; color:var(--morado); padding:4px 10px; border-radius:20px; font-size:12px;">{{a.tipo}}</span></td>
+<td>{{a.descripcion}}</td><td>{{a.impacto}}</td>
+<td><a href="/detalle/{{a.id}}">👁️</a> <a href="/editar/{{a.id}}">✏️</a> <a href="/eliminar/{{a.id}}">🗑️</a></td>
+</tr>{% endfor %}</table>
+{% endblock %}

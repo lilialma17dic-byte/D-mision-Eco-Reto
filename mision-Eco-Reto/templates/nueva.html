@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<div class="form-box"><h2>🌱 Nueva acción ecológica</h2>
+<form method="post">
+<label>Tipo de acción</label><select name="tipo"><option>Reciclaje</option><option>Ahorro de agua</option><option>Transporte</option><option>Energía</option></select>
+<label>Descripción</label><textarea name="descripcion" placeholder="Escribe qué hiciste..." required></textarea>
+<label>Fecha</label><input type="date" name="fecha" required>
+<label>Impacto (kg, litros, kWh, etc.)</label><input name="impacto" placeholder="Ej. 5 kg, 50 litros, 2 kWh..." required>
+<button class="btn-main">+ Guardar acción</button>
+</form></div>{% endblock %}

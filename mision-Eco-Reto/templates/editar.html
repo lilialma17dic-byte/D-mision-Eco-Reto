@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<div class="form-box"><h2>✏️ Editar acción</h2>
+<form method="post">
+<label>Tipo de acción</label><select name="tipo"><option selected>{{accion.tipo}}</option><option>Reciclaje</option><option>Ahorro de agua</option><option>Transporte</option><option>Energía</option></select>
+<label>Descripción</label><textarea name="descripcion">{{accion.descripcion}}</textarea>
+<label>Fecha</label><input type="date" name="fecha" value="{{accion.fecha}}">
+<label>Impacto</label><input name="impacto" value="{{accion.impacto}}">
+<button class="btn-main" style="background:var(--azul);">💾 Actualizar</button> <a href="/home" style="margin-left:10px;">Cancelar</a>
+</form></div>{% endblock %}

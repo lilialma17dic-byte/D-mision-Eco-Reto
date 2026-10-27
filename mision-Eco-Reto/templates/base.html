@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="/static/style.css"><title>Eco-Reto</title></head>
+<body>
+<div class="sidebar">
+  <h2 style="padding:0 20px;">Misión<br><span style="color:var(--verde);">Eco-Reto</span></h2>
+  <a href="/home" class="active">🏠 Inicio</a>
+  <a href="/home">📋 Mis acciones</a>
+  <a href="/nueva">➕ Nueva acción</a>
+  <a href="/logout">🚪 Cerrar sesión</a>
+</div>
+<div class="topbar"><span>¡Bienvenido a Misión Eco-Reto!</span><span>Hola, {{ session.usuario }} 🌱</span></div>
+<div class="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
